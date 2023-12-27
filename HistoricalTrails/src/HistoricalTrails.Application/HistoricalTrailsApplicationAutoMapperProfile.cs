@@ -1,4 +1,8 @@
 ﻿using AutoMapper;
+using HistoricalTrails.Blogs;
+using HistoricalTrails.Categories;
+using HistoricalTrails.Events;
+using HistoricalTrails.HistoricalPlaces;
 
 namespace HistoricalTrails;
 
@@ -6,8 +10,16 @@ public class HistoricalTrailsApplicationAutoMapperProfile : Profile
 {
     public HistoricalTrailsApplicationAutoMapperProfile()
     {
-        /* You can configure your AutoMapper mapping configuration here.
-         * Alternatively, you can split your mapping configurations
-         * into multiple profile classes for a better organization. */
+        CreateMap<HistoricalPlace, HistoricalPlaceDto>();
+        CreateMap<CreateUpdateHistoricalPlaceDto, HistoricalPlace>();
+
+        CreateMap<Blog, BlogDto>();
+        CreateMap<CreateUpdateBlogDto, Blog>();
+
+        CreateMap<Category, CategoryDto>();
+        CreateMap<CreateUpdateCategoryDto, Category>();
+
+        CreateMap<Event, EventDto>();
+        CreateMap<CreateUpdateEventDto, Event>();
     }
 }
