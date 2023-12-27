@@ -45,6 +45,19 @@ public class HistoricalTrailsMenuContributor : IMenuContributor
 
         administration.SetSubItemOrder(IdentityMenuNames.GroupName, 2);
         administration.SetSubItemOrder(SettingManagementMenuNames.GroupName, 3);
+        context.Menu.AddItem(
+    new ApplicationMenuItem(
+        "HistoricalTrails",
+        l["Menu:HistoricalTrails"],
+        icon: "fa fa-book"
+    ).AddItem(
+        new ApplicationMenuItem(
+            "HistoricalTrails.HistoricalPlaces",
+            l["Menu:HistoricalPlaces"],
+            url: "/HistoricalPlaces"
+        )
+    )
+);
 
         return Task.CompletedTask;
     }

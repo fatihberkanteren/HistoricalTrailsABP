@@ -6,7 +6,7 @@ using Volo.Abp.Domain.Repositories;
 
 namespace HistoricalTrails.HistoricalPlaces;
 
-public class HistoricalPlacesAppService : CrudAppService<
+public class HistoricalPlaceAppService : CrudAppService<
     HistoricalPlace, //The HistoricalPlace entity
     HistoricalPlaceDto, //Used to show HistoricalPlaces
     Guid, //Primary key of the HistoricalPlace entity
@@ -14,7 +14,7 @@ public class HistoricalPlacesAppService : CrudAppService<
     CreateUpdateHistoricalPlaceDto>, //Used to create/update a HistoricalPlace
 IHistoricalPlaceAppService //implement the IHistoricalPlaceAppService
 {
-    public HistoricalPlacesAppService(IRepository<HistoricalPlace, Guid> repository) : base(repository)
+    public HistoricalPlaceAppService(IRepository<HistoricalPlace, Guid> repository) : base(repository)
     {
 
     }
