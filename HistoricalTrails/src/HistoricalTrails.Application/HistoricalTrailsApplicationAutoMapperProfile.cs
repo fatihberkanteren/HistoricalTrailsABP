@@ -10,9 +10,6 @@ public class HistoricalTrailsApplicationAutoMapperProfile : Profile
 {
     public HistoricalTrailsApplicationAutoMapperProfile()
     {
-        CreateMap<HistoricalPlace, HistoricalPlaceDto>();
-        CreateMap<CreateUpdateHistoricalPlaceDto, HistoricalPlace>();
-
         CreateMap<Blog, BlogDto>();
         CreateMap<CreateUpdateBlogDto, Blog>();
 
@@ -21,5 +18,9 @@ public class HistoricalTrailsApplicationAutoMapperProfile : Profile
 
         CreateMap<Event, EventDto>();
         CreateMap<CreateUpdateEventDto, Event>();
+
+        CreateMap<HistoricalPlace, HistoricalPlaceDto>();
+        CreateMap<CreateUpdateHistoricalPlaceDto, HistoricalPlace>();
+
     }
 }

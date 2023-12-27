@@ -13,4 +13,3 @@ public interface IHistoricalPlaceAppService : ICrudAppService< //Defines CRUD me
     CreateUpdateHistoricalPlaceDto> //Used to create/update a 
 {
 }
-

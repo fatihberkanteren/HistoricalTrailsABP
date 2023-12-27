@@ -9,7 +9,7 @@ using Volo.Abp.Domain.Repositories;
 
 namespace HistoricalTrails.Categories
 {
-    internal class CategoryAppService :
+    public class CategoryAppService :
         CrudAppService<
         Category, //The Book entity
         CategoryDto, //Used to show books
@@ -18,8 +18,10 @@ namespace HistoricalTrails.Categories
         CreateUpdateCategoryDto>, //Used to create/update a book
     ICategoryAppService //implement the IBookAppService
     {
-        public CategoryAppService(IRepository<Category, Guid> repository) : base(repository)
+        public CategoryAppService(IRepository<Category, Guid> repository)
+    : base(repository)
         {
+
         }
     }
 }

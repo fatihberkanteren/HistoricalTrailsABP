@@ -9,7 +9,7 @@ using Volo.Abp.Domain.Repositories;
 
 namespace HistoricalTrails.Blogs
 {
-    internal class BlogAppService :
+    public class BlogAppService :
         CrudAppService<
         Blog, //The Book entity
         BlogDto, //Used to show books
@@ -18,8 +18,10 @@ namespace HistoricalTrails.Blogs
         CreateUpdateBlogDto>, //Used to create/update a book
     IBlogAppService //implement the IBookAppService
     {
-        public BlogAppService(IRepository<Blog, Guid> repository) : base(repository)
+        public BlogAppService(IRepository<Blog, Guid> repository)
+        : base(repository)
         {
+
         }
     }
 }
